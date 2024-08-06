@@ -113,6 +113,7 @@ app.get("/login", (c) => {
 
 app.post("/login", async (c) => {
   const body = await c.req.parseBody();
+  console.log(body);
   const schema = z.object({
     email: z.string().email(),
     password: z.string(),
